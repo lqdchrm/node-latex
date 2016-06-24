@@ -111,9 +111,9 @@ module.exports = function(doc, options) {
       //Invoke LaTeX
       var tex = spawn(tex_command, [
         "-interaction=nonstopmode",
-        "texput.tex"
+        "-output-directory=" + dirpath,
+        input_path
       ], {
-        cwd: dirpath,
         env: process.env
       });
 
